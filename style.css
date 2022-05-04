@@ -4,11 +4,145 @@
     margin: 0;
     box-sizing: border-box;
     font-size: 15px;
+    font-family: 'League Spartan', sans-serif;
 }
 :root{
     --darkMagenta: hsl(300, 43%, 22%);
     --softPink: hsl(333, 80%, 67%);
-    --grayMagenta: hsl(303, 10%, 53%);
-    --lightGrayMagenta: hsl(300, 24%, 96%);
-    --spartanFont :'League Spartan', sans-serif; ;
+    --darkGrayMagenta: hsl(303, 10%, 53%);
+    --grayMagenta: hsl(300, 24%, 96%);
+}
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(images/bg-pattern-top-mobile.svg);
+    background-repeat: no-repeat;
+}
+.card{
+    width: 90%;
+    height: fit-content;
+    padding: 0 2rem;
+}
+.card__info{
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.card__info h1{
+    color: var(--darkMagenta);
+    font-size: 2rem;
+    padding: 4rem 2rem 1rem 2rem;
+    line-height: 1.5rem;
+}
+.card__info h2{
+    color: var(--darkGrayMagenta);
+}
+.card__reviews{
+    margin: 3rem 0;
+}
+.reviews{
+    display: block;
+    background-color: var(--grayMagenta);
+    margin: 1rem 0;
+    height: 4rem;
+    width: 100%;
+    border-radius: .5rem;
+    padding-top: .8rem;
+    text-align: center;
+}
+.svg svg{
+    margin: 0 .2rem ;
+}
+.reviews p{
+    color: var(--darkMagenta);
+    font-weight: 500;
+}
+.wrapper__element{
+    background-color: var(--darkMagenta);
+    margin: 1rem 0;
+    height: fit-content;
+    text-align: center;
+    color: var(--grayMagenta);
+    border-radius: .8rem;
+    padding: 1.5rem;
+}
+.wrapper__element img{
+    width: 3rem;
+    border-radius: 50%;
+    display: inline-block;
+} 
+.reviewer{
+    display: flex;
+    margin: 1rem;
+}
+.buyersName{
+    padding-left: 1rem;
+}
+.buyersName p:nth-child(2){
+    color: var(--softPink);
+}
+@media screen and (min-width: 1440px) and (max-width: 1980px) {
+    main{
+        background-image: url(images/bg-pattern-top-desktop.svg);
+        background-repeat: no-repeat;
+    }
+    .card{
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 5rem;
+    }
+    .card__info h1{
+        font-size: 3rem;
+        line-height: 2.5rem;
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .card__info{
+        margin-left: 15%;
+        padding: 3rem 3rem 0 3rem;
+        width: 30%;
+        text-align: left;
+    }
+    .card__wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .wrapper__element{
+        margin: 0 1rem;
+        width: 18%;
+        height: 100%;
+    }
+    .card__reviews{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    .reviews{
+        width: 50%;
+        display: flex;
+        align-items: center;
+    }
+    .reviews:nth-of-type(2){
+        margin-left: 5rem;
+    }
+    .reviews:nth-of-type(3){
+        margin-left: 10rem;
+    }
+    .svg{
+        width: 50%;
+    }
+    .wrapper__element:nth-of-type(2){
+        margin-top: 1rem;
+    }
+    
+    .wrapper__element:nth-of-type(3){
+        margin-top: 2rem;
+    }
 }
